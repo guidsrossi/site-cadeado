@@ -1,7 +1,7 @@
 // Altere aqui a senha correta do cadeado.
-const senhaCorreta = [3, 2, 1];
-
-const valores = [0, 0, 0];
+const senhaCorreta = [4, 1, 2, 6];
+const valores = [0, 0, 0, 0];
+const mensagemInicial = "Escolha os 4 n\u00fameros e tente abrir o cadeado.";
 
 const wheels = document.querySelectorAll(".number-wheel");
 const checkButton = document.getElementById("checkButton");
@@ -64,7 +64,7 @@ function resetarJogo() {
   valores.forEach((_, index) => atualizarNumero(index, 0, "down"));
 
   lock.classList.remove("open");
-  message.textContent = "Escolha os 3 números e tente abrir o cadeado.";
+  message.textContent = mensagemInicial;
   message.className = "message";
 
   checkButton.disabled = false;

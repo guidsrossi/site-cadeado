@@ -6,15 +6,15 @@ Projeto simples em HTML, CSS e JavaScript puro.
 
 1. Extraia o arquivo ZIP.
 2. Abra o arquivo `index.html` no navegador.
-3. No celular, arraste os números para cima ou para baixo.
+3. No celular, arraste os numeros para cima ou para baixo.
 4. Clique em `Tentar abrir`.
 
-## Senha padrão
+## Senha padrao
 
-A senha padrão é:
+A senha padrao e:
 
 ```js
-3 2 1
+4 1 2 6
 ```
 
 ## Como alterar a senha
@@ -22,11 +22,11 @@ A senha padrão é:
 Abra o arquivo `script.js` e altere esta linha:
 
 ```js
-const senhaCorreta = [3, 2, 1];
+const senhaCorreta = [4, 1, 2, 6];
 ```
 
-Exemplo para deixar a senha como 7 5 9:
+Exemplo para deixar a senha como 7 5 9 2:
 
 ```js
-const senhaCorreta = [7, 5, 9];
+const senhaCorreta = [7, 5, 9, 2];
 ```

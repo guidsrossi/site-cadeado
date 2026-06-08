@@ -21,20 +21,25 @@
   --border: rgba(255, 255, 255, 0.15);
 }
 
+html,
 body {
-  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100dvh;
   font-family: 'Poppins', sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 35%),
     radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.2), transparent 35%),
     linear-gradient(135deg, var(--bg-one), var(--bg-two));
-  overflow-x: hidden;
 }
 
 .container {
   width: 100%;
-  min-height: 100vh;
+  height: 100dvh;
   padding: 24px;
   display: flex;
   justify-content: center;
@@ -212,13 +217,13 @@ h1 {
 .code-area {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: clamp(6px, 2vw, 14px);
   margin-bottom: 24px;
   touch-action: manipulation;
 }
 
 .number-wheel {
-  width: 86px;
+  width: clamp(62px, 18vw, 86px);
   border-radius: 24px;
   padding: 10px;
   background: rgba(15, 23, 42, 0.7);
@@ -419,33 +424,67 @@ h1 {
 
 @media (max-width: 420px) {
   .container {
-    padding: 16px;
+    padding: 10px;
   }
 
   .card {
-    padding: 28px 18px;
+    padding: 18px 14px;
     border-radius: 28px;
   }
 
-  .code-area {
-    gap: 9px;
+  .top-badge {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    margin-bottom: 14px;
+    font-size: 0.86rem;
   }
 
   .number-wheel {
-    width: 76px;
-    padding: 8px;
-    border-radius: 20px;
+    padding: 7px;
+    border-radius: 18px;
   }
 
   .number-display {
-    height: 68px;
+    height: 58px;
+    border-radius: 14px;
   }
 
   .number-display span {
-    font-size: 2.65rem;
+    font-size: 2.3rem;
   }
 
   .lock-wrapper {
-    height: 155px;
+    height: 132px;
+    margin-bottom: 16px;
+  }
+
+  .lock {
+    transform: scale(0.82);
+  }
+
+  .message {
+    min-height: 42px;
+    margin-top: 12px;
+    font-size: 0.88rem;
+  }
+
+  .check-button,
+  .reset-button,
+  .success-content button {
+    padding: 12px 14px;
+  }
+
+  .success-content {
+    padding: 24px 18px;
+  }
+
+  .success-content p {
+    font-size: 0.9rem;
   }
 }
