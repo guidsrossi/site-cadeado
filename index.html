@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cadeado Secreto</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <section class="card" id="card">
+      <div class="background-glow glow-one"></div>
+      <div class="background-glow glow-two"></div>
+
+      <div class="top-badge">
+        <span>🔐</span>
+        <small>Desafio secreto</small>
+      </div>
+
+      <h1>Abra o Cadeado</h1>
+
+      <p class="subtitle">
+        Arraste cada número para cima ou para baixo no celular até encontrar a senha correta.
+      </p>
+
+      <div class="lock-wrapper">
+        <div class="lock" id="lock">
+          <div class="shackle"></div>
+          <div class="lock-body">
+            <div class="shine"></div>
+            <div class="keyhole"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="code-area" aria-label="Seletor de senha">
+        <div class="number-wheel" data-index="0">
+          <button class="arrow up" type="button">▲</button>
+          <div class="number-display">
+            <span>0</span>
+          </div>
+          <button class="arrow down" type="button">▼</button>
+        </div>
+
+        <div class="number-wheel" data-index="1">
+          <button class="arrow up" type="button">▲</button>
+          <div class="number-display">
+            <span>0</span>
+          </div>
+          <button class="arrow down" type="button">▼</button>
+        </div>
+
+        <div class="number-wheel" data-index="2">
+          <button class="arrow up" type="button">▲</button>
+          <div class="number-display">
+            <span>0</span>
+          </div>
+          <button class="arrow down" type="button">▼</button>
+        </div>
+      </div>
+
+      <button id="checkButton" class="check-button" type="button">
+        Tentar abrir
+      </button>
+
+      <p id="message" class="message">
+        Escolha os 3 números e tente abrir o cadeado.
+      </p>
+
+      <button id="resetButton" class="reset-button hidden" type="button">
+        Jogar novamente
+      </button>
+    </section>
+  </main>
+
+  <div id="successModal" class="success-modal" aria-hidden="true">
+    <div class="success-content">
+      <div class="confetti">🎉</div>
+      <h2>Parabéns!</h2>
+      <p>Você acertou a senha e desbloqueou o cadeado.</p>
+      <button id="closeModal" type="button">Continuar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
