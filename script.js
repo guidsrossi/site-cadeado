@@ -1,5 +1,5 @@
 // Altere aqui a senha correta do cadeado.
-const senhaCorreta = [4, 1, 2, 6];
+const senhaCorreta = [4, 0, 1, 2];
 const valores = [0, 0, 0, 0];
 const mensagemInicial = "Escolha os 4 n\u00fameros e tente abrir o cadeado.";
 
