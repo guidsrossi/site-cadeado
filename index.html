@@ -22,20 +22,9 @@
 
       <h1>Abra o Cadeado</h1>
 
-      <p class="subtitle">
-        Resolva a charada de inform&aacute;tica b&aacute;sica e ajuste os 4 n&uacute;meros para abrir.
+      <p class="subtitle" id="subtitle">
+        Ajuste os n&uacute;meros e tente abrir.
       </p>
-
-      <div class="riddle-box" aria-label="Charada da senha">
-        <strong>Charada da senha</strong>
-        <p>Cada dica revela um d&iacute;gito, na ordem:</p>
-        <ol>
-          <li>Quantas setas direcionais principais existem no teclado?</li>
-          <li>Um computador desligado est&aacute; consumindo quantas tarefas na tela?</li>
-          <li>Quantos cliques simples voc&ecirc; usa para selecionar um &iacute;cone?</li>
-          <li>Quantos bot&otilde;es principais tem um mouse comum?</li>
-        </ol>
-      </div>
 
       <div class="lock-wrapper">
         <div class="lock" id="lock">
@@ -47,7 +36,7 @@
         </div>
       </div>
 
-      <div class="code-area" aria-label="Seletor de senha">
+      <div class="code-area" id="codeArea" aria-label="Seletor de senha">
         <div class="number-wheel" data-index="0">
           <button class="arrow up" type="button">&#9650;</button>
           <div class="number-display">
@@ -79,6 +68,22 @@
           </div>
           <button class="arrow down" type="button">&#9660;</button>
         </div>
+
+        <div class="number-wheel hidden" data-index="4">
+          <button class="arrow up" type="button">&#9650;</button>
+          <div class="number-display">
+            <span>0</span>
+          </div>
+          <button class="arrow down" type="button">&#9660;</button>
+        </div>
+
+        <div class="number-wheel hidden" data-index="5">
+          <button class="arrow up" type="button">&#9650;</button>
+          <div class="number-display">
+            <span>0</span>
+          </div>
+          <button class="arrow down" type="button">&#9660;</button>
+        </div>
       </div>
 
       <button id="checkButton" class="check-button" type="button">
@@ -97,9 +102,11 @@
 
   <div id="successModal" class="success-modal" aria-hidden="true">
     <div class="success-content">
-      <div class="confetti">&#127881;</div>
-      <h2>Cadeado aberto!</h2>
-      <p><strong>Exerc&iacute;cio sobre outliers:</strong> observe os dados 12, 14, 15, 16, 17, 18, 19, 20, 21, 22 e 90. Qual valor parece ser um outlier? Explique como ele pode alterar a m&eacute;dia e por que a mediana pode ser mais resistente nesse caso.</p>
+      <div class="confetti" id="modalIcon">&#127881;</div>
+      <h2 id="modalTitle">Cadeado aberto!</h2>
+      <div id="modalBody">
+        <p><strong>Exerc&iacute;cio sobre outliers:</strong> observe os dados 12, 14, 15, 16, 17, 18, 19, 20, 21, 22 e 90. Qual valor parece ser um outlier? Explique como ele pode alterar a m&eacute;dia e por que a mediana pode ser mais resistente nesse caso.</p>
+      </div>
       <button id="closeModal" type="button">Fechar</button>
     </div>
   </div>
