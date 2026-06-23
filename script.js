@@ -84,7 +84,7 @@ function atualizarInterface() {
   subtitle.textContent = fase.subtitulo;
   passwordLabel.textContent = fase.dica;
   passwordInput.value = "";
-  passwordInput.placeholder = faseAtual === fases.length - 1 ? "3-8-2212-5-2" : "Senha";
+  passwordInput.placeholder = faseAtual === fases.length - 1 ? "0-0-0000-0-0" : "Senha";
   message.textContent = "Digite a senha para liberar esta fase.";
   message.className = "message";
   lock.classList.remove("open");
